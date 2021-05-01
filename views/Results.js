@@ -8,14 +8,9 @@ const inputs = [
     title: 'Nickname'
   },
   {
-    id: 1,
-    name: 'rank',
-    title: 'Rank'
-  },
-  {
     id: 2,
-    name: 'contestants',
-    title: 'Contestants'
+    name: 'contestant',
+    title: 'Contestant'
   },
   {
     id: 3,
@@ -41,16 +36,6 @@ const inputs = [
     id: 7,
     name: 'p4',
     title: 'P4'
-  },
-  {
-    id: 8,
-    name: 'total',
-    title: 'Total'
-  },
-  {
-    id: 9,
-    name: 'award',
-    title: 'Award'
   }
 ]
 

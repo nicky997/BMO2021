@@ -1,5 +1,19 @@
 import Participants from '../views/Participants'
 
+const gold_medal = 'GOLD MEDAL'
+const silver_medal = 'SILVER MEDAL'
+const bronze_medal = 'BRONZE MEDAL'
+
+const getAward = points => {
+  if (points > 30 && points <= 40) {
+    return gold_medal
+  } else if (points > 26 && points < 30) {
+    return silver_medal
+  } else {
+    return bronze_medal
+  }
+}
+
 export default Participants
 
 export const getServerSideProps = async () => {
@@ -7,59 +21,31 @@ export const getServerSideProps = async () => {
     'https://bmo-2021-default-rtdb.europe-west1.firebasedatabase.app/users.json'
   ).then(response => response.json())
 
-  const totalArray = []
-
-  for (let key in response) {
-    totalArray.push({
-      p1: response[key].userData.p1,
-      p2: response[key].userData.p2,
-      p3: response[key].userData.p3,
-      p4: response[key].userData.p4,
-    })
-  }
-
-
-
   const usersArray = []
-  function totalSum(p1,p2,p3,p4){
-        return p1+p2+p3+p4;
-      }
+
   for (let key in response) {
-      let p1 = response[key].userData.p1,
-          p2 = response[key].userData.p2,
-          p3 = response[key].userData.p3,
-          p4 = response[key].userData.p4;
-      let total = totalSum(Number(p1),Number(p2),Number(p3),Number(p4));
+    const { p1, p2, p3, p4 } = response[key].userData
 
-      if (total <=40 && total >=31) {
-
-      }
-        else if(total <=30 && total >= 27){
-
-        }
-        else{
-
-      }
+    const total = +p1 + +p2 + +p3 + +p4
 
     usersArray.push({
-      rank: response[key].userData.contestants,
       nickname: response[key].userData.nickname,
-      contestants: response[key].userData.contestants,
+      contestant: response[key].userData.contestant,
       country: response[key].userData.country,
-      p1: response[key].userData.p1,
-      p2: response[key].userData.p2 ,
-      p3: response[key].userData.p3,
-      p4: response[key].userData.p4,
-      total : total,
-      award : total,
-
-
+      p1,
+      p2,
+      p3,
+      p4,
+      total,
+      award: getAward(total)
     })
   }
+
+  const sortedUsersArray = usersArray.sort((a, b) => a.total - b.total)
 
   return {
     props: {
-      users: usersArray
+      users: sortedUsersArray
     }
   }
 }

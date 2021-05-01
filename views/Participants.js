@@ -3,7 +3,6 @@ const Participants = ({ users }) => {
     <>
       <div className="table-wrapper">
         <div className="heading">Participants List page</div>
-
         <div className="table-row-headings">
           <div className="rank">Rank</div>
           <div className="contestant">Contestant</div>
@@ -14,13 +13,12 @@ const Participants = ({ users }) => {
           <div className="p4">P4</div>
           <div className="total">Total</div>
           <div className="award">Award</div>
-
         </div>
-        {users.map(element => {
+        {users.map((element, index) => {
           return (
             <div className="table-row" key={element.nickname}>
-              <div className="rank">{element.rank}</div>
-              <div className="contestant">{element.contestants}</div>
+              <div className="rank">{index + 1}</div>
+              <div className="contestant">{element.contestant}</div>
               <div className="country">{element.country}</div>
               <div className="p1">{element.p1}</div>
               <div className="p2">{element.p2}</div>
@@ -29,7 +27,6 @@ const Participants = ({ users }) => {
               <div className="total">{element.total}</div>
               <div className="award">{element.award}</div>
             </div>
-
           )
         })}
       </div>
