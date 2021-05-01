@@ -1,0 +1,59 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  margin: 5px auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.save-button {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  font-family: Tahoma;
+  margin: 10px auto
+}
+
+.table-wrapper {
+  width: auto;
+  margin: 10px auto;
+}
+
+.heading {
+  margin: 20px auto;
+}
+
+.table-row, .table-row-headings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.table-row-headings {
+  background-color: lightgray;
+}
+
+.rank, .contestant, .country, .p1, .p2, .p3, .p4, .total, .award {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
