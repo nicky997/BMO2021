@@ -41,7 +41,7 @@ export const getServerSideProps = async () => {
     })
   }
 
-  const sortedUsersArray = usersArray.sort((a, b) => a.total - b.total)
+  const sortedUsersArray = usersArray.sort((a, b) => b.total - a.total)
 
   return {
     props: {
