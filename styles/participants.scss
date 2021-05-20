@@ -1,0 +1,16 @@
+.participants-wrapper{
+  text-align: center;
+  .participants-grid{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+   .participant-country{
+    font-weight: bold;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+}
