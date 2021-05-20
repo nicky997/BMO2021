@@ -1,7 +1,10 @@
+import Header_page from "../components/Header-page";
 const Participants = ({ users }) => {
   return (
+
     <>
-      <div className="table-wrapper">
+      <Header_page/>
+      <div className="table-wrapper infopage">
         <div className="heading">Participants List page</div>
         <div className="table-row-headings">
           <div className="rank">Rank</div>

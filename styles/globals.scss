@@ -1,9 +1,13 @@
+@import "header";
+@import "fonts";
+@import "globals-pages";
+@import "participants";
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "IBM Plex Sans";
+  background-color : #e2e8f0;
 }
 
 a {
@@ -37,7 +41,6 @@ a {
 
 .table-wrapper {
   width: auto;
-  margin: 10px auto;
 }
 
 .heading {
@@ -57,26 +60,4 @@ a {
   border: 1px solid black;
   padding: 10px 20px;
 }
-ul {
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-}
-.header-background{
-  height: 40vh;
-  background : url("../public/featured-moldova.jpg");
-  filter: blur(8px);
-  background-size: cover;
-  background-position: 100% 65%;
-  background-repeat: no-repeat;
-}
 
-.header-info{
-  position: absolute;
-  top: 5%;
-  left: 15%;
-  color: white;
-}
-.welcome-text{
-  font-size: 50px;
-}

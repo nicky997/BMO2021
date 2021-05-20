@@ -1,19 +1,29 @@
 import Link from 'next/link'
 const Nav = () => {
     return(
-        <ul>
-             <li><Link href="/"> Home</Link></li>
-            <li><Link href="/regulations">Regulations</Link></li>
-            <li><Link href="/organizers">Organizers, Partners and Supporters</Link></li>
-            <li><Link href="/committees">Committees</Link></li>
-            <li><Link href="/participants-countries">Participants</Link></li>
-            <li><Link href="/programme">Programme</Link></li>
-            <li><Link href="/problems-solutions">Problems/Solutions</Link></li>
-            <li><Link href="/participants">Results</Link></li>
-            <li><Link href="/gallery">Gallery</Link></li>
-            <li><Link href="/information">Information</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-        </ul>
+        <div className={"menu-nav"}>
+            <a><Link href="/">Home</Link></a>
+            <div className="dropdown">
+            <a className={"dropbtn"}>About▾</a>
+
+             <div className={"dropdown-content"}>
+                 <Link href="/regulations">Regulations</Link>
+                 <Link href="/organizers">Organizers, Partners and Supporters</Link>
+                 <Link href="/committees">Committees</Link>
+                 <Link href="/programme">Programme</Link>
+               </div>
+                </div>
+            <Link href="/participants-countries">Participants</Link>
+            <Link href="/problems-solutions">Problems/Solutions</Link>
+            <Link href="/participants">Results</Link>
+            <div className={"dropdown"} >
+         <a className={"dropbtn"}> Information▾</a>
+            <div className={"dropdown-content"}>
+                <Link href="/contact">Contact</Link>
+                <Link href="/gallery">Gallery</Link>
+            </div>
+            </div>
+        </div>
     )
 }
 export default Nav

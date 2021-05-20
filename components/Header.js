@@ -1,19 +1,25 @@
-import Image from 'next/image'
 import Nav from '../components/Nav'
 const Header = () => {
     return(
         <div className={"header-wrapper"}>
-            <div className="header-background"></div>
-            <div className="header-info">
-            <Image
-            src="/Flag_of_Moldova.svg"
-            alt="Flag of Moldova"
-            width={100}
-            height={100}
-            />
-            <div className={"welcome-text"}>Welcome you to the 36th Balkan Mathematical Olympiad</div>
-            <Nav/>
+            <div className={"header-menu"}>
+                <div className={"jbmo-logo"}>JBMO | </div>
+                <Nav/>
             </div>
+
+                <div className="header-info">
+            <div className={"welcome-text"}>
+
+                <h1><span>JBMO 2021 </span></h1>
+                <h2><span>25th Junior Balkan Mathematical Olympiad </span></h2>
+                <h3><span>June 23-29, 2021, Chişinău, Republic of Moldova</span></h3>
+
+
+            </div>
+
+            </div>
+
+
         </div>
     )
 }
