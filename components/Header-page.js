@@ -1,9 +1,17 @@
+import Image from 'next/Image'
 import Nav from '../components/Nav'
 const Header_page = () => {
     return(
         <div className={"header-wrapper"}>
             <div className={"header-menu"}>
-                <div className={"jbmo-logo"}>JBMO | </div>
+                <div className={"jbmo-logo"}>
+                <Image
+        src="/images/logo.png"
+        alt="header image"
+         width={210}
+        height={150}
+      />
+                </div>
                 <Nav/>
             </div>
 

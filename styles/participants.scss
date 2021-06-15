@@ -11,6 +11,31 @@
     flex-flow: column;
     align-items: center;
     text-align: center;
+     div{
+ box-shadow: 0 0 30px #666;
+     }
+
+     img{
+
+     }
+    &:hover{
+      cursor: pointer;
+    }
   }
 }
+}
+.participant-country-flex{
+
+  display: flex;
+  justify-content: center;
+  div{
+    text-align: center;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 50px;
+    margin: 20px;
+    box-shadow: 0 0 30px #666;
+  }
 }

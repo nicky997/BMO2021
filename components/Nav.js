@@ -8,6 +8,7 @@ const Nav = () => {
 
              <div className={"dropdown-content"}>
                  <Link href="/regulations">Regulations</Link>
+                 <Link href="/annual-regulations">Annual regulations</Link>
                  <Link href="/organizers">Organizers, Partners and Supporters</Link>
                  <Link href="/committees">Committees</Link>
                  <Link href="/programme">Programme</Link>
