@@ -1,4 +1,4 @@
-import Image from 'next/Image'
+import Image from 'next/image'
 import Nav from '../components/Nav'
 const Header_page = () => {
     return(
